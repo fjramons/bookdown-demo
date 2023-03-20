@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Yihui Xie"
+title: "Ejemplo de libro Bookdown mínimo"
+author: "Yihui Xie (traducción: Francisco Javier Ramón)"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -9,28 +9,39 @@ bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
 github-repo: rstudio/bookdown-demo
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "Éste es un ejemplo mínimo de uso del paquete bookdown para crear un libro. El formato de salida por defecto de este ejemplo es bookdown::gitbook."
 ---
 
-# Prerequisites
+# Prerrequisitos
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports, e.g., a math equation $a^2 + b^2 = c^2$.
+Éste es un libro de _ejemplo_ escrito en **Markdown**. Puede utilizar cualquier sintaxis soportada por Markdown de Pandoc, p.e., una ecuación matemática $a^2 + b^2 = c^2$.
 
-The **bookdown** package can be installed from CRAN or Github:
+El paquete **bookdown** se puede instalar desde CRAN (versión estable) o desde Github (versión de desarrollo):
 
 ```{r eval=FALSE}
 install.packages("bookdown")
-# or the development version
+
+# o la versión de desarrollo
 # devtools::install_github("rstudio/bookdown")
 ```
 
-Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+Por favor, recuerde que cada fichero Rmd debe contener un solo capítulo, y que un capítulo viene definido por la cabecera de primer nivel `#`.
 
-To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+Para compilar este ejemplo a PDF se necesita XeLaTeX. Se recomienda instalar TinyTeX (que incluye XeLaTeX): <https://yihui.name/tinytex/>.
 
 ```{r include=FALSE}
-# automatically create a bib database for R packages
+# crea automáticamente una base de datos bib para los paquetes de R
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
+```
+
+Según se describe en la [guía de Bookdown](https://bookdown.org/yihui/bookdown/build-the-book.html), este libro puede generarse desde la consola de R usando:
+
+```{r eval=FALSE}
+# Renderiza a HTML
+bookdown::render_book("index.Rmd", "bookdown::gitbook")
+
+# Renderiza a PDF
+bookdown::render_book("index.Rmd", "bookdown::pdf_book")
 ```

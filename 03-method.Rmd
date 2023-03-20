@@ -1,22 +1,22 @@
-# Methods
+# Metodología
 
-We describe our methods in this chapter.
+En este capítulo describiremos nuestra metodología.
 
-Math can be added in body using usual syntax like this 
+Se pueden añadir expresiones matemáticas en el texto empleando la sintaxis habitual: 
 
-## math example
+## Ejemplo mátemático
 
-$p$ is unknown but expected to be around 1/3. Standard error will be approximated
+$p$ se desconoce pero se espera que sea aproximadamente 1/3. El error estándar será aproximadamente
 
 $$
 SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027
 $$
 
-You can also use math in footnotes like this^[where we mention $p = \frac{a}{b}$].
+También pueden usarse expresiones matemáticas las notas al pie, de esta manera^[aquí mencionamos $p = \frac{a}{b}$].
 
-We will approximate standard error to 0.027[^longnote]
+Aproximaremos el error estándar a 0.027[^longnote]
 
-[^longnote]: $p$ is unknown but expected to be around 1/3. Standard error will be approximated
+[^longnote]: $p$ es desconocido pero se espera que sea aproximadamente 1/3. El error estándar será aproximadamente
 
     $$
     SE = \sqrt(\frac{p(1-p)}{n}) \approx \sqrt{\frac{1/3 (1 - 1/3)} {300}} = 0.027

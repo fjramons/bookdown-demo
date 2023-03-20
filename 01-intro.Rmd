@@ -1,21 +1,21 @@
-# Introduction {#intro}
+# Introducción {#intro}
 
-You can label chapter and section titles using `{#label}` after them, e.g., we can reference Chapter \@ref(intro). If you do not manually label them, there will be automatic labels anyway, e.g., Chapter \@ref(methods).
+Puede etiquetar títulos de sección y capítulo usando `{#label}` justo detrás de los títulos de los mismos, p.e. así añadiríamos una referencia al capítulo \@ref(intro). En caso de que no se etiqueten manualmente, se etiquetarán automáticamente en cualquier caso, p.e., Capítulo \@ref(literatura).
 
-Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+Las figuras y tablas con títulos se colocarán en los entornos `figure` y `table`, respectivamente.
 
-```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+```{r nice-fig, fig.cap='¡Aquí hay una bonita figura!', out.width='80%', fig.asp=.75, fig.align='center'}
 par(mar = c(4, 4, .1, .1))
 plot(pressure, type = 'b', pch = 19)
 ```
 
-Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+Para referenciar una figura, emplee la etiqueta de su chunk de código con el prefijo `fig:`, p.e. véase la figura \@ref(fig:nice-fig). Análogamente, podrá referenciar tablas generadas mediante `knitr::kable()`, p.e., véase la tabla  \@ref(tab:nice-tab).
 
 ```{r nice-tab, tidy=FALSE}
 knitr::kable(
-  head(iris, 20), caption = 'Here is a nice table!',
+  head(iris, 20), caption = '¡Ésta es una bonita tabla!',
   booktabs = TRUE
 )
 ```
 
-You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
+También puede incluir citas. P.e. en este libro de ejemplo, estamos usando el paquete **bookdown** [@R-bookdown], que se construyó a partir de R Markdown y el paquete **knitr** [@xie2015].

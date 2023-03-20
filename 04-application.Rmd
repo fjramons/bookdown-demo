@@ -1,7 +1,7 @@
-# Applications
+# Aplicaciones
 
-Some _significant_ applications are demonstrated in this chapter.
+En este capítulo se demuestran algunas aplicaciones _significativas_.
 
-## Example one
+## Ejemplo uno
 
-## Example two
+## Ejemplo dos
